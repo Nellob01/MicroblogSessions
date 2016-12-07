@@ -53,8 +53,6 @@ public class Main {
                         users.put(name, user);
                     }
 
-                    //User user = new User(name, password);
-                    //users.put(name,user);
 
 
                     if (password.equals(user.password)) {
