@@ -4,13 +4,24 @@ Welcome {{name}}!
     <input type="text" placeholder="Enter a message" name="enterMessage"/>
     <button type="submit">Submit</button>
 </form>
-
 <form action="/logout" method="post">
-<button type="submit">Logout</button>
+    <button type="submit">Logout</button>
 </form>
+<form action="/delete" method="post">
+    <input type="text" placeholder="message #" name="deleteMessage"/>
+    <button type="submit">Delete</button>
+</form>
+<form action="/edit" method="post">
+    <input type="text" placeholder="message #" name="chooseMessage"/>
+    <input type="text" placeholder="Edit message" name="editMessage"/>
+    <button type="submit">Edit</button>
+</form>
+
+
 Messages by {{name}}:<br>
-{{#message}}
-{{text}}<br>
+<ol>{{#message}}
+<li>{{text}}</li>
 {{/message}}
+</ol>
 </body>
 </html>
